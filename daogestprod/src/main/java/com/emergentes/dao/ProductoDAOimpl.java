@@ -43,7 +43,8 @@ public class ProductoDAOimpl extends ConexionDB implements ProductoDAO {
             ps.setString(1, producto.getDescripcion());
             ps.setInt(2, producto.getCantidad());
             ps.setDouble(3, producto.getPrecio());
-            ps.setString(4, producto.getCategoria());
+            ps.setString(4, producto.getCategoria());            
+            ps.setInt(5, producto.getId());
 
             ps.executeUpdate();
         } catch (SQLException e) {
